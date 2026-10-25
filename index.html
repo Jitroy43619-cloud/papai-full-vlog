@@ -1,128 +1,141 @@
+
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Papai Full Vlog — daily life, travel, fun and vlog videos. Subscribe on YouTube!">
   <title>Papai Full Vlog | Official Website</title>
+  <meta name="description" content="Welcome to Papai Full Vlog! Explore daily life, travel, lifestyle and fun videos.">
   <style>
-    :root { --bg:#0b1020; --panel:#141c31; --text:#f6f7fb; --muted:#b8c1d9; --accent:#ff3b5c; --accent2:#ffb347; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; font-family:Arial, Helvetica, sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
-    a { color:inherit; text-decoration:none; }
-    .nav { display:flex; justify-content:space-between; align-items:center; gap:16px; padding:18px max(5%, calc((100% - 1120px)/2)); background:#090d19; position:sticky; top:0; z-index:10; border-bottom:1px solid #26304a; }
-    .brand { font-weight:900; font-size:1.1rem; letter-spacing:.4px; }
-    .brand span { color:var(--accent); }
-    .navlinks { display:flex; gap:20px; flex-wrap:wrap; font-size:.95rem; color:var(--muted); }
-    .navlinks a:hover { color:white; }
-    .hero { padding:82px 5% 72px; text-align:center; background:radial-gradient(ellipse at top, #29345d 0%, #10172c 45%, #0b1020 78%); }
-    .tag { display:inline-block; border:1px solid #536083; color:#dce3ff; border-radius:999px; padding:6px 13px; font-size:.85rem; }
-    h1 { font-size:clamp(2.3rem, 7vw, 4.8rem); line-height:1.05; margin:22px 0 16px; letter-spacing:-1.5px; }
-    h1 span { color:var(--accent2); }
-    .hero p { max-width:650px; margin:0 auto 28px; color:var(--muted); font-size:1.1rem; }
-    .buttons { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; }
-    .btn { display:inline-block; padding:12px 20px; border-radius:10px; font-weight:800; transition:transform .15s; }
-    .btn:hover { transform:translateY(-2px); }
-    .primary { background:var(--accent); color:white; }
-    .secondary { border:1px solid #697493; background:#ffffff0b; }
-    .wrap { width:min(1120px, 90%); margin:auto; }
-    section { padding:60px 0; }
-    .section-head { text-align:center; margin-bottom:28px; }
-    h2 { font-size:clamp(1.7rem, 4vw, 2.4rem); margin:0 0 8px; }
-    .section-head p, .muted { color:var(--muted); }
-    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
-    .card { background:var(--panel); border:1px solid #27314d; border-radius:18px; padding:24px; }
-    .emoji { font-size:2rem; }
-    .card h3 { margin:12px 0 6px; }
-    .card p { color:var(--muted); margin:0; }
-    .youtube { background:linear-gradient(135deg,#191f37,#111729); border:1px solid #303a59; border-radius:20px; padding:30px; text-align:center; }
-    .youtube .play { font-size:3.2rem; }
-    .about { display:grid; grid-template-columns:1.1fr .9fr; gap:24px; align-items:center; }
-    .about-panel { background:var(--panel); border:1px solid #27314d; border-radius:18px; padding:28px; }
-    .highlight { color:var(--accent2); font-weight:800; }
-    footer { border-top:1px solid #26304a; padding:24px 5%; text-align:center; color:var(--muted); font-size:.9rem; }
-    @media(max-width:760px) { .nav { align-items:flex-start; flex-direction:column; } .navlinks { gap:12px; } .hero { padding-top:60px; } .grid { grid-template-columns:1fr; } .about { grid-template-columns:1fr; } section { padding:44px 0; } }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1020;
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      padding: 20px;
+      background: #141c31;
+      text-align: center;
+      border-bottom: 1px solid #303b55;
+    }
+    header h2 { margin: 0; color: #ff4b5c; }
+    nav { margin-top: 12px; }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .hero {
+      text-align: center;
+      padding: 75px 20px;
+      background: linear-gradient(135deg, #18294b, #411d48);
+    }
+    .hero h1 { font-size: clamp(34px, 6vw, 58px); margin: 0 0 15px; }
+    .hero h1 span { color: #ff4b5c; }
+    .hero p { color: #d4d9e7; max-width: 600px; margin: 0 auto 25px; }
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      background: #ff3348;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin: 5px;
+    }
+    .btn.secondary { background: transparent; border: 1px solid #fff; }
+    section { padding: 45px 20px; text-align: center; }
+    section h2 { font-size: 30px; }
+    .muted { color: #b8c2d8; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      max-width: 950px;
+      margin: 25px auto 0;
+    }
+    .card {
+      padding: 25px;
+      background: #141c31;
+      border: 1px solid #303b55;
+      border-radius: 14px;
+    }
+    .card .emoji { font-size: 36px; }
+    footer {
+      padding: 25px;
+      text-align: center;
+      background: #070b15;
+      color: #b8c2d8;
+    }
   </style>
 </head>
 <body>
-  <nav class="nav">
-    <a class="brand" href="#home">PAPAI <span>FULL VLOG</span></a>
-    <div class="navlinks">
-      <a href="#home">Home</a><a href="#videos">Videos</a><a href="#about">About</a><a href="#contact">Subscribe</a>
-    </div>
-  </nav>
-
-  <header class="hero" id="home">
-    <span class="tag">WELCOME TO MY WORLD ✨</span>
-    <h1>PAPAI <span>FULL VLOG</span></h1>
-    <p>Daily moments, new places, fun experiences and real-life stories — সবকিছু একসাথে, আমার vlog-এর দুনিয়ায়!</p>
-    <div class="buttons">
-      <a class="btn primary" href="https://www.youtube.com/channel/UCfhtvDOkvlRv1ghSPd6yuKQ?sub_confirmation=1" target="_blank" rel="noopener">▶ Subscribe on YouTube</a>
-      <a class="btn secondary" href="https://www.youtube.com/channel/UCfhtvDOkvlRv1ghSPd6yuKQ/videos" target="_blank" rel="noopener">Watch Videos</a>
-    </div>
+  <header>
+    <h2>PAPAI FULL VLOG</h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#content">My Content</a>
+      <a href="#contact">Subscribe</a>
+    </nav>
   </header>
 
   <main>
-    <section id="videos">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>🎬 Explore My Videos</h2>
-          <p>নতুন vlog দেখতে YouTube channel-এ চলে যাও।</p>
-        </div>
-        <div class="youtube">
-          <div class="play">▶️</div>
-          <h3>Watch Papai Full Vlog on YouTube</h3>
-          <p class="muted">Vlogs • Daily Life • Travel • Fun</p>
-          <a class="btn primary" href="https://www.youtube.com/channel/UCfhtvDOkvlRv1ghSPd6yuKQ/videos" target="_blank" rel="noopener">See All Videos</a>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <div class="section-head">
-          <h2>What You’ll Find Here</h2>
-          <p>এই channel-এ কী কী দেখতে পাবে</p>
-        </div>
-        <div class="grid">
-          <article class="card"><div class="emoji">📹</div><h3>Daily Vlogs</h3><p>প্রতিদিনের ছোট-বড় মুহূর্ত আর নিজের অভিজ্ঞতা।</p></article>
-          <article class="card"><div class="emoji">🌍</div><h3>Explore & Travel</h3><p>ঘোরাঘুরি, নতুন জায়গা আর মজার সব অভিজ্ঞতা।</p></article>
-          <article class="card"><div class="emoji">😄</div><h3>Fun Moments</h3><p>হাসি, আনন্দ আর real-life entertainment।</p></article>
-        </div>
-      </div>
+    <section class="hero" id="home">
+      <h1>Welcome to <span>Papai Full Vlog!</span></h1>
+      <p>
+        Real moments, exciting journeys and everyday adventures.
+        Join me and be part of the journey!
+      </p>
+      <a class="btn" href="https://www.youtube.com/@PapaiMinivlog"
+         target="_blank" rel="noopener noreferrer">Watch My Videos</a>
+      <a class="btn secondary" href="#about">Explore More</a>
     </section>
 
     <section id="about">
-      <div class="wrap about">
-        <div>
-          <span class="highlight">ABOUT THE CHANNEL</span>
-          <h2>আমার vlog family-তে স্বাগতম!</h2>
-          <p class="muted">Papai Full Vlog হলো আমার নিজের vlog channel, যেখানে আমি আমার জীবনের মুহূর্ত, ঘোরাঘুরি এবং মজার অভিজ্ঞতা share করি। ভিডিও ভালো লাগলে Like, Comment আর Subscribe করে পাশে থেকো!</p>
-          <a class="btn primary" href="https://www.youtube.com/channel/UCfhtvDOkvlRv1ghSPd6yuKQ?sub_confirmation=1" target="_blank" rel="noopener">Join the Vlog Family</a>
+      <h2>About My Channel</h2>
+      <p class="muted">
+        Welcome to my world! Papai Full Vlog is all about sharing
+        memorable moments, lifestyle, travel and fun experiences.
+        Subscribe and join our growing community.
+      </p>
+    </section>
+
+    <section id="content">
+      <h2>Explore My Content</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="emoji">📹</div>
+          <h3>Daily Vlogs</h3>
+          <p class="muted">Discover my everyday life and real moments.</p>
         </div>
-        <div class="about-panel">
-          <h3>⭐ Support the Channel</h3>
-          <p class="muted">ভিডিও ভালো লাগলে:</p>
-          <p>👍 Like the video</p>
-          <p>💬 Comment your thoughts</p>
-          <p>🔔 Subscribe and turn on notifications</p>
+        <div class="card">
+          <div class="emoji">🌍</div>
+          <h3>Travel & Explore</h3>
+          <p class="muted">Join me on new adventures and exciting journeys.</p>
+        </div>
+        <div class="card">
+          <div class="emoji">😄</div>
+          <h3>Fun & Lifestyle</h3>
+          <p class="muted">Enjoy entertaining videos and memorable experiences.</p>
         </div>
       </div>
     </section>
 
     <section id="contact">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Stay Connected</h2>
-          <p>নতুন ভিডিও মিস না করতে channel-টি subscribe করো।</p>
-          <a class="btn primary" href="https://www.youtube.com/channel/UCfhtvDOkvlRv1ghSPd6yuKQ?sub_confirmation=1" target="_blank" rel="noopener">🔔 Subscribe Now</a>
-        </div>
-      </div>
+      <h2>Let's Connect!</h2>
+      <p class="muted">Enjoy my content? Subscribe to my YouTube channel.</p>
+      <a class="btn" href="https://www.youtube.com/@PapaiMinivlog"
+         target="_blank" rel="noopener noreferrer">Subscribe on YouTube</a>
     </section>
   </main>
 
-  <footer>© <span id="year"></span> Papai Full Vlog · Made with ❤️ for the vlog family</footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <footer>
+    <p>© 2026 Papai Full Vlog. All rights reserved.</p>
+    <p>Thanks for visiting my website!</p>
+  </footer>
 </body>
 </html>
